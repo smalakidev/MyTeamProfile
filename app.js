@@ -79,3 +79,42 @@ const managerQuestions = [
 	},
 ];
 
+//* questions that prompts the user if they want to add another team member.
+const endManagerQuestions = {
+	type: 'list',
+	message: 'Would you like to add another team member to this team? Select Yes to add an Engineer or Intern team member or select No if no additional team members need to be added.',
+	choices: ['Yes', 'No'],
+	name: 'teamSize',
+};
+
+//* Question to ask which role the new team member should be mapped to.
+const teamMemberRolePick = {
+	type: 'list',
+	message: 'Is this team member an Engineer or an Intern?',
+	choices: ['Engineer', 'Intern'],
+	name: 'teamMemberRoleType',
+};
+
+//* Questions for the engineer profile
+const engineerQuestions = [
+	{
+		type: 'input',
+		message: "What is this Engineer's name?",
+		name: 'enginnerName',
+	},
+	{
+		type: 'input',
+		message: "What is this Engineer's ID number?",
+		name: 'engineerId',
+		validate: function (num) {
+			numbers = /^[0-9]+$/.test(num);
+
+			if (numbers) {
+				log.green(`        ----------Number Formatting Accepted----------`);
+				return true;
+			} else {
+				log.red(`        ----------Please enter a valid ID Number that does not include anything other than numbers (No letters or symbols)----------`);
+				return false;
+			}
+		},
+	},
