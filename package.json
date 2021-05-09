@@ -18,5 +18,9 @@
   "homepage": "https://github.com/smalakidev/MyTeamProfile#readme",
   "directories": {
     "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "logger": "0.0.1"
   }
 }

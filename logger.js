@@ -1,4 +1,4 @@
-unction Logger() {
+function Logger() {
 	//Loop with methods
 	if (!this.init) {
 		Logger.prototype.init = true;
