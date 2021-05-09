@@ -19,8 +19,7 @@ Team Profile Generator
 The repository can be cloned if someone wants to use this template for their own portfolio
 
 ## Usage
-
-This is a burger app that lets the user customize any burger that they want. It is deployed on Heroku
+This is an app that generates the Team of Staff from the Manager on to the Intern.
 
 ## License
 
@@ -32,7 +31,7 @@ none
 
 ## Tests
 
-There currently is no testing
+Testing was done through node app.js
 
 ## Questions
 
