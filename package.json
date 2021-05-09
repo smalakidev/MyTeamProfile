@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/smalakidev/MyTeamProfile/issues"
   },
-  "homepage": "https://github.com/smalakidev/MyTeamProfile#readme"
+  "homepage": "https://github.com/smalakidev/MyTeamProfile#readme",
+  "directories": {
+    "test": "test"
+  }
 }
