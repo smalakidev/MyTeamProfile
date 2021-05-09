@@ -1,0 +1,19 @@
+{
+  "name": "myteamprofile",
+  "version": "1.0.0",
+  "description": "Team Profile Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smalakidev/MyTeamProfile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smalakidev/MyTeamProfile/issues"
+  },
+  "homepage": "https://github.com/smalakidev/MyTeamProfile#readme"
+}
