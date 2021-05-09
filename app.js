@@ -15,3 +15,67 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('./jsfiles/htmlRenderer');
 
 const log = new Logger(); 
+
+//* Blank array to be filled in with pushed constructors classes.
+const teamMembersArray = [];
+
+//* Introduction Question to open the applicaiton
+const cliIntroQuestion = {
+	type: 'list',
+	message: `
+        Welcome to the Team Profile Generator Application. 
+        This program will allow the user to create an HTML based team profile display that will outline the team members as well as some brief information on each team member. 
+        
+        The user will be prompted to submit information on the team manager as well as select how many team members other than the manager are in the team. 
+        The user will then submit information for each team member, choosing if they are an engineer or intern and submit additional information based on the team member role selection. 
+        Do you wish to continue with this application?`,
+	choices: ['Yes, Start Building Team', 'No, Close Application'],
+	name: 'cliIntroQ',
+};
+
+//* Questions to be answered to fill in the manager constructor
+const managerQuestions = [
+	{
+		type: 'input',
+		message: "What is the Manager's name?",
+		name: 'managerName',
+	},
+	{
+		type: 'input',
+		message: "What is the Manager's ID number?",
+		name: 'managerId',
+		validate: function (num) {
+			numbers = /^[0-9]+$/.test(num);
+
+			if (numbers) {
+				log.green(`        ----------Number Formatting Accepted----------`);
+				return true;
+			} else {
+				log.red(`        ----------Please enter a valid ID Number that does not include anything other than numbers (No letters or symbols)----------`);
+				return false;
+			}
+		},
+	},
+	{
+		type: 'input',
+		message: "What is the Manager's email?",
+		name: 'manageEmail',
+		validate: function (emailInput) {
+			emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput);
+
+			if (emailFormat) {
+				log.green(`        ----------Email Formatting Accepted----------`);
+				return true;
+			} else {
+				log.red(`        ----------Please enter a valid email----------`);
+				return false;
+			}
+		},
+	},
+	{
+		type: 'input',
+		message: "What is the Manager's office number?",
+		name: 'managerOfficeNumber',
+	},
+];
+
